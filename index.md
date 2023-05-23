@@ -1,9 +1,9 @@
-# <p align="center">SV248S Dataset</p>
+<p align="center">SV248S Dataset</p>
 
-### <p align="center"> 人生就是一个不断学习的过程，通过学习来充实自己的头脑，让自己更有智慧的生活下去，去探索那未知领域的神秘，去享受成长带来的快乐和惬意。 </p>
+<p align="center"> 人生就是一个不断学习的过程，通过学习来充实自己的头脑，让自己更有智慧的生活下去，去探索那未知领域的神秘，去享受成长带来的快乐和惬意。 </p>
 
-#### <p align="center"> **Authors:** Yuxuna Li, Licheng Jiao, Zhongjian Huang, Xin Zhang, Ruohan Zhang, Xue Song, Chenxi Tian, Zixiao Zhang, Fang Liu, Shuyuan Yang, Biao Hou, Wenping Ma, Xu Liu, Lingling Li </p>
-#### <p align="center"> School of IPIU Laboratory, Xidian University </p>
+<p align="center"> **Authors:** Yuxuna Li, Licheng Jiao, Zhongjian Huang, Xin Zhang, Ruohan Zhang, Xue Song, Chenxi Tian, Zixiao Zhang, Fang Liu, Shuyuan Yang, Biao Hou, Wenping Ma, Xu Liu, Lingling Li </p>
+<p align="center"> School of IPIU Laboratory, Xidian University </p>
 This is a regular paragraph.
 
 <table>
