@@ -31,7 +31,7 @@
     <div class="column has-text-centered">
     <h1 class="title is-1 publication-title"> <img id="teaser" width="5%" src="logo.png"> <b>SV248S Dataset:</b>  </h1>
     <h3 class="title is-3 publication-title"> Single Objection Tracking Dataset </h3>
-    <h2 class="title is-3 publication-title"> Satellite Video </h3>
+    <h2 class="title is-3 publication-title"> Satellite Videos </h3>
     </div>
     <br>
     <div class="is-size-5">
@@ -43,11 +43,15 @@
         <span class="author-block"><h4 style="text-align: center;"><b style="color:#d76100; font-weight:normal">&#x25B6 </b>School of IPIU, Xidian University</h4></span>
     </div>
 
-    <br><br>
-    <h3 class="subtitle has-text-centered">
-        该数据集的详细描述见“Deep Learning-Based Object Tracking in Satellite Videos: A Comprehensive Survey With a New Dataset”。 
-	该数据集由西安电子科技大学IPIU实验室（智能感知与图像理解教育部重点实验室）于2021年7月完成。
-    </h3>
+    <br>
+    <p style="text-indent: 32.4px;">
+        该数据集是由吉林一号卫星创建，由分辨率为0.92米的高清全色图构成。
+        数据集使用长关官方开源的6个视频，每个视频选择约40个目标。
+        每个视频有500-753帧，持续20-30.12秒，帧速率为25fps，包括四个国家，五个城市，共248个物体。
+        SV中有船舶、车辆、大型车辆和飞机四类对象，主要关注难以跟踪的小目标（车辆、大型车辆，占物体比例的90%）。
+        有关该数据集更详细的数据见<a href="https://github.com/xdai-dlgvv/sv_dataset">“Deep Learning-Based Object Tracking in Satellite Videos: A Comprehensive Survey With a New Dataset”</a>。 
+	    该数据集由西安电子科技大学IPIU实验室（智能感知与图像理解教育部重点实验室）于2021年7月完成。
+    </p>
 
     <div class="column has-text-centered">
         <span class="link-block">
@@ -70,25 +74,15 @@
             </a>
         </span>
 
-<!--         <span class="link-block">
-            <a href="https://github.com/0nutation/SpeechGPT" target="_blank"
-            class="external-link button is-normal is-rounded is-dark">
-            <span class="icon">
-                <i class="fas fa-database"></i>
-            </span>
-            <span>Dataset</span>
-            </a>
-        </span> -->
-
     </div>
 </div>
 
 <div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
     <div class="columns is-centered has-text-centered">
         <div class="column is-six-fifths">
-          <h2 class="title is-3">Image</h2>
+            <h2 class="title is-3">Image</h2>
         </div>
-      </div>
+    </div>
 
     <div class="text-center">
 <!--         <video width="80%" controls="">
@@ -105,37 +99,130 @@
 			<table class="table table-hover pt-2">
 			<thead>
 			<tr>
-            <th style="text-align: center">Name</th>
-	    <th style="text-align: center">Definition</th>
-            <th style="text-align: center">Dependence</th>
+                <th style="text-align: center"></th>
+                <th style="text-align: center">Name</th>
+	            <th style="text-align: center">Definition</th>
+                <th style="text-align: center">Dependence</th>
+                <th style="text-align: center">AUTO</th>
 			</tr>
 			</thead>
 			<tbody>
-            <td style="text-align: center;vertical-align:middle;width: 800px">Center Point(CP)</td>
-            <td style="text-align: center;vertical-align:middle;width: 800px">It represents the CP of the object bounding box.</td>
-	    <td style="text-align: center;vertical-align:middle;width: 800px">BBox</td>
+                <td rowspan="3"; style="text-align: center;vertical-align:middle;width: 400px">Basic Properties</td>
+                <td style="text-align: center;vertical-align:middle;width: 400px">Center Point(CP)</td>
+                <td style="text-align: center;vertical-align:middle;width: 800px">It represents the CP of the object bounding box.</td>
+                <td style="text-align: center;vertical-align:middle;width: 200px">BBox</td>
+                <td style="text-align: center;vertical-align: middle;width: 200px">Y</td>
             </tr>
 
             <tr>
-            <td style="text-align: center;vertical-align:middle;width: 800px">Listen to the speech and write down its content.</td>
-            <td style="text-align: center;vertical-align:middle;width: 800px"><audio controls="controls" style="width: 140px;"><source src="question/asr_input_2.flac" autoplay/>Your browser does not support the audio element.</audio></td>
-            <td style="text-align: center;vertical-align:middle;width: 800px">Did anyone know that these proofs would be there no one the printer.</td>
+                <td style="text-align: center;vertical-align:middle;width: 400px">Movement Velocity(MV)</td>
+                <td style="text-align: center;vertical-align:middle;width: 800px">It calculates the average velocity considering both the speed value and the direction in adjacent five frames (unit: pps)</td>
+                <td style="text-align: center;vertical-align:middle;width: 200px">CP</td>
+                <td style="text-align: center;vertical-align: middle;width: 200px">Y</td>
             </tr>
             
             <tr>
-            <td style="text-align: center;vertical-align:middle;width: 800px">Would you mind speaking these words as naturally as possible? </td>
-            <td style="text-align: center;vertical-align:middle;width: 800px">Today is a sunny day and I'm happy to be here.</td>
-            <td style="text-align: center;vertical-align:middle;width: 800px"><audio controls="controls" style="width: 140px;"><source src="answer/tts_0.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+                <td style="text-align: center;vertical-align:middle;width: 400px">Object Size(OS)</td>
+                <td style="text-align: center;vertical-align:middle;width: 800px">The largest value is selected from the height and width of the object bounding box.</td>
+                <td style="text-align: center;vertical-align:middle;width: 200px">BBox</td>
+                <td style="text-align: center;vertical-align: middle;width: 200px">Y</td>
             </tr>
 
             <tr>
-            <td style="text-align: center;vertical-align:middle;width: 800px">Would you please speed-read the following sentence?  </td>
-            <td style="text-align: center;vertical-align:middle;width: 800px">I am a large language model that can listen and speak, a member of Fudan University, and glad to talk with you.</td>
-            <td style="text-align: center;vertical-align:middle;width: 800px"><audio controls="controls" style="width: 140px;"><source src="answer/tts_1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+                <td rowspan="3"; style="text-align: center;vertical-align: middle;width: 400px">Frame State Flags</td>
+                <td style="text-align: center;vertical-align: middle;width: 400px">Invisible(INV)</td>
+                <td style="text-align: center;vertical-align: middle;width: 800px">The object disappeared without any occluder or is too similar to its surroundings.</td>
+                <td style="text-align: center;vertical-align: middle;width: 200px">M</td>
+                <td style="text-align: center;vertical-align: middle;width: 200px">N</td>
             </tr>
 
+            <tr>
+                <td style="text-align: center;vertical-align: middle;width: 400px">Normal Visible(NOR)</td>
+                <td style="text-align: center;vertical-align: middle;width: 800px">The object is visible and found easily.</td>
+                <td style="text-align: center;vertical-align: middle;width: 200px">M</td>
+                <td style="text-align: center;vertical-align: middle;width: 200px">N</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center;vertical-align: middle;width: 400px">Occlusion(OCC)</td>
+                <td style="text-align: center;vertical-align: middle;width: 800px">The object is in the shadow of the building or behind something.</td>
+                <td style="text-align: center;vertical-align: middle;width: 200px">M</td>
+                <td style="text-align: center;vertical-align: middle;width: 200px">N</td>    
+            </tr>
+            
+            <tr>
+                <td rowspan="10"; style="text-align: center;vertical-align: middle;width: 400px">Sequence Attributes</td>
+                <td style="text-align: center;vertical-align: middle;width: 400px">Background Change(BCH)</td>
+                <td style="text-align: center;vertical-align: middle;width: 800px">The background of the tracked object has noticeable changes in color or texture.</td>
+                <td style="text-align: center;vertical-align: middle;width: 200px">M</td>
+                <td style="text-align: center;vertical-align: middle;width: 200px">N</td>
+            </tr>
+
+            <tr>
+                <td style="text-align: center;vertical-align: middle;width: 400px">Background Cluster(BCL)</td>
+                <td style="text-align: center;vertical-align: middle;width: 800px">There are at least 10 frames that contain in the INV flag.</td>
+                <td style="text-align: center;vertical-align: middle;width: 200px">INV</td>
+                <td style="text-align: center;vertical-align: middle;width: 200px">Y</td>
+            </tr>
+
+            <tr>
+                <td style="text-align: center;vertical-align: middle;width: 400px">Continuous Occlusion(CO)</td>
+                <td style="text-align: center;vertical-align: middle;width: 800px">STO or LTO occur twice or more times in a sequence.</td>
+                <td style="text-align: center;vertical-align: middle;width: 200px">STO, LTO</td>
+                <td style="text-align: center;vertical-align: middle;width: 200px">Y</td>
+            </tr>
+
+            <tr>
+                <td style="text-align: center;vertical-align: middle;width: 400px">Dense Similarity(DS)</td>
+                <td style="text-align: center;vertical-align: middle;width: 800px">One or more similar objects exist around the tracked object in the range of 2.5 times OS.</td>
+                <td style="text-align: center;vertical-align: middle;width: 200px">OS</td>
+                <td style="text-align: center;vertical-align: middle;width: 200px">N</td>
+            </tr>
+
+            <tr>
+                <td style="text-align: center;vertical-align: middle;width: 400px">In-plane Rotation(IPR)</td>
+                <td style="text-align: center;vertical-align: middle;width: 800px">The object has an in-plane rotation at an angle greater than or equal to 30&#176;.</td>
+                <td style="text-align: center;vertical-align: middle;width: 200px">MV</td>
+                <td style="text-align: center;vertical-align: middle;width: 200px">Y</td>
+            </tr>
+
+            <tr>
+                <td style="text-align: center;vertical-align: middle;width: 400px">Illumination Variation(IV)</td>
+                <td style="text-align: center;vertical-align: middle;width: 800px">The object has noticeable changes in brightness or color.</td>
+                <td style="text-align: center;vertical-align: middle;width: 200px">M</td>
+                <td style="text-align: center;vertical-align: middle;width: 200px">N</td>
+            </tr>
+
+            <tr>
+                <td style="text-align: center;vertical-align: middle;width: 400px">Short-term Occlusion(STO)</td>
+                <td style="text-align: center;vertical-align: middle;width: 800px">The sequence exists less than or equal to 50 conseccutive frames with OCC flag.</td>
+                <td style="text-align: center;vertical-align: middle;width: 200px">OCC</td>
+                <td style="text-align: center;vertical-align: middle;width: 200px">Y</td>
+            </tr>
+
+            <tr>
+                <td style="text-align: center;vertical-align: middle;width: 400px">Long-term Occlusion(LTO)</td>
+                <td style="text-align: center;vertical-align: middle;width: 800px">The sequence exists more than 50 consecutive frames with OCC flag.</td>
+                <td style="text-align: center;vertical-align: middle;width: 200px">OCC</td>
+                <td style="text-align: center;vertical-align: middle;width: 200px">Y</td>
+            </tr>
+
+            <tr>
+                <td style="text-align: center;vertical-align: middle;width: 400px">Natural Disturbance(ND)</td>
+                <td style="text-align: center;vertical-align: middle;width: 800px">The object's appearance is influenced by smog or sandy weather or blocked by clouds.</td>
+                <td style="text-align: center;vertical-align: middle;width: 200px">M</td>
+                <td style="text-align: center;vertical-align: middle;width: 200px">N</td>
+            </tr>
+
+            <tr>
+                <td style="text-align: center;vertical-align: middle;width: 400px">Slow Motion(SM)</td>
+                <td style="text-align: center;vertical-align: middle;width: 800px">The moving speed of the tracked object is fewer than 2.2pps.</td>
+                <td style="text-align: center;vertical-align: middle;width: 200px">MV</td>
+                <td style="text-align: center;vertical-align: middle;width: 200px">Y</td>
+            </tr>
 
             </tbody>
+
         </table>
     </div>
 </div>
